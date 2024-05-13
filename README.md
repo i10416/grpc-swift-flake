@@ -1,5 +1,11 @@
 ## grpc-swift flake
 
+## Try It Out
+
+```sh
+nix develop github:i10416/grpc-swift-flake
+```
+
 ## About
 
 This is a repository for grpc-swift wrapped by Nix flake.
