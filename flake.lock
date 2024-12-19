@@ -21,16 +21,16 @@
     "grpc-swift-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1713789505,
-        "narHash": "sha256-4kr28UyumKHpwiVZGT0KCVyM/6D/VKCRIDXGaB8BgJc=",
+        "lastModified": 1726668274,
+        "narHash": "sha256-uI8MpRIGGn/d00pNzBxEZgQ06Q9Ladvdlc5cGNhOnkI=",
         "owner": "grpc",
         "repo": "grpc-swift",
-        "rev": "6a90b7e77e29f9bda6c2b3a4165a40d6c02cfda1",
+        "rev": "07123ed731671e800ab8d641006613612e954746",
         "type": "github"
       },
       "original": {
         "owner": "grpc",
-        "ref": "refs/tags/1.23.0",
+        "ref": "refs/tags/1.23.1",
         "repo": "grpc-swift",
         "type": "github"
       }

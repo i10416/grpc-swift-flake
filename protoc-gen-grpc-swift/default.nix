@@ -1,17 +1,12 @@
 { pkgs ? import <nixpkgs> { inherit system; }, system ? builtins.currentSystem
-, grpc-swift-src ? (pkgs.fetchFromGitHub {
-  owner = "grpc";
-  repo = "grpc-swift";
-  rev = "1.23.0";
-  sha256 = "sha256-4kr28UyumKHpwiVZGT0KCVyM/6D/VKCRIDXGaB8BgJc=";
-}) }:
+, grpc-swift-src, version }:
 let
   product = "protoc-gen-grpc-swift";
   grpc-swift =
     import ../grpc-swift { inherit pkgs system grpc-swift-src product; };
 in pkgs.stdenv.mkDerivation {
   pname = product;
-  version = "1.23.0";
+  version = version;
   src = ./.;
   installPhase = ''
     mkdir -p $out/bin
