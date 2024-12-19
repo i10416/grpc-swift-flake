@@ -3,7 +3,7 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   inputs.flake-parts.url = "github:hercules-ci/flake-parts";
   inputs.grpc-swift-src = {
-    url = "github:grpc/grpc-swift?ref=refs/tags/1.23.0";
+    url = "github:grpc/grpc-swift?ref=refs/tags/1.23.1";
     flake = false;
   };
   outputs = inputs@{ self, nixpkgs, flake-parts, grpc-swift-src }:
@@ -14,11 +14,12 @@
         let
           pkgs = import nixpkgs { inherit system; };
           protobuf = pkgs.protobuf;
+          version = "1.23.1";
           protoc-gen-swift = import ./protoc-gen-swift/default.nix {
-            inherit pkgs system grpc-swift-src;
+            inherit pkgs system grpc-swift-src version;
           };
           protoc-gen-grpc-swift = import ./protoc-gen-grpc-swift/default.nix {
-            inherit pkgs system grpc-swift-src;
+            inherit pkgs system grpc-swift-src version;
           };
         in rec {
           packages = {
